@@ -1,19 +1,19 @@
 function handleSubmit() {
     var current_grade = $("#current-grade").val();
-    var hopefull_grade = $("#hopefull-grade").val();
+    var hopeful_grade = $("#hopeful-grade").val();
     var final_worth = $("#final-worth").val();
 
     if (
         isValidNumber(current_grade)
-        && isValidNumber(hopefull_grade)
+        && isValidNumber(hopeful_grade)
         && isValidNumber(final_worth)
     ) {
          // Convert these from percentage to floats
         current_grade = current_grade / 100.0;
-        hopefull_grade = hopefull_grade / 100.0;
+        hopeful_grade = hopeful_grade / 100.0;
         final_worth = final_worth / 100.0;
 
-        var answer = (hopefull_grade - (current_grade * (1 - final_worth))) / (1 * final_worth);
+        var answer = (hopeful_grade - (current_grade * (1 - final_worth))) / (1 * final_worth);
 
         html = "";
         html += "<p>";
